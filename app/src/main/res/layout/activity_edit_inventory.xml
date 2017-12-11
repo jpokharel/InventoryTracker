@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".EditInventory">
+
+    <LinearLayout
+        android:id="@+id/name_layout"
+        style="@style/EditLinearLayoutStyle">
+
+        <TextView
+            style="@style/TextViewStyle"
+            android:text="@string/inventory_name" />
+
+        <EditText
+            android:id="@+id/edit_name"
+            style="@style/EditTextStyle"
+            android:hint="@string/inventory_name"
+            android:inputType="textCapWords" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/quantity_layout"
+        style="@style/EditLinearLayoutStyle"
+        >
+
+        <TextView
+            style="@style/TextViewStyle"
+            android:text="@string/quantity" />
+
+        <LinearLayout
+            style="@style/EditTextStyle"
+            android:layout_gravity="center"
+            android:weightSum="1">
+
+            <Button
+                android:id="@+id/decrease_button"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:text="@string/minus"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/edit_quantity"
+                android:layout_width="88dp"
+                android:layout_height="match_parent"
+                android:inputType="number" />
+
+            <Button
+                android:id="@+id/increase_button"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:gravity="center"
+                android:text="@string/plus"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/price_layout"
+        style="@style/EditLinearLayoutStyle">
+
+        <TextView
+            style="@style/TextViewStyle"
+            android:text="@string/price" />
+
+        <EditText
+            android:id="@+id/edit_price"
+            style="@style/EditTextStyle"
+            android:hint="@string/price"
+            android:inputType="numberDecimal" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/order_item_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text = "Order More" />
+
+        <Button
+            android:id="@+id/delete_item_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/delete" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/product_screenshot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="24dp"
+            android:gravity="center" />
+
+        <Button
+            android:id="@+id/capture_picture_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/product_screenshot"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="24dp"
+            android:gravity="center"
+            android:text="@string/picture"
+            android:textAllCaps="true"
+            android:textColor="@color/colorPrimaryDark"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/save_inventory_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/capture_picture_button"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="24dp"
+            android:gravity="center"
+            android:text="@string/save"
+            android:textAllCaps="true"
+            android:textColor="@color/colorPrimaryDark"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+</LinearLayout>
